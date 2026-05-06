@@ -10,6 +10,8 @@ docker pull ollama/ollama:latest
 
 docker_args="-d -v ollama:/root/.ollama -p $host_port:$container_port --name ollama ollama/ollama --restart always"
 
+echo $docker_args
+
 if [ "$use_gpu" = "y" ]; then
     docker_args="--gpus=all $docker_args"
 fi
