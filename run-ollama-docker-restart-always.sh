@@ -8,7 +8,7 @@ read -r -p "Do you want ollama in Docker with GPU support? (y/n): " use_gpu
 docker rm -f ollama || true
 docker pull ollama/ollama:latest
 
-docker_args="-d -v ollama:/root/.ollama -p $host_port:$container_port --name ollama ollama/ollama --restart always"
+docker_args="-d -v ollama:/root/.ollama -p $host_port:$container_port --restart always --name ollama ollama/ollama "
 
 echo $docker_args
 
