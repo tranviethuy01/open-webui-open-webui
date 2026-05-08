@@ -18,4 +18,4 @@ fi
 
 docker run $docker_args
 
-docker image prune -f
+#docker image prune -f
